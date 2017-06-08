@@ -5,4 +5,4 @@
 # This script will install the package in one step
 
 apt-get install -y git
-git clone https://github.com/rezitech/letsencrypt-unifi-nvr.git /usr/local/bin/
+git clone https://github.com/rezitech/letsencrypt-unifi-nvr.git /usr/local/bin/letsencrypt-unifi-nvr/
