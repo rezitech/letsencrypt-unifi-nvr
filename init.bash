@@ -6,3 +6,5 @@
 
 apt-get install -y git
 git clone https://github.com/rezitech/letsencrypt-unifi-nvr.git /usr/local/bin/letsencrypt-unifi-nvr/
+
+echo $1
