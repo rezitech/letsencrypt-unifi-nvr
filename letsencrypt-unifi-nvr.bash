@@ -62,6 +62,14 @@ if [ $install == 1 ]; then
 #       #### Get certificate
         # Request certificate
         certbot certonly --standalone -d $domain --register-unsafely-without-email
+        
+        #write out current crontab
+		crontab -l > mycron
+		#echo new cron into cron file
+		echo "00 00 * * * /usr/local/bin/letsencrypt-unifi-nvr/letsencrypt-unifi-nvr.bash -r -d $domain" >> mycron
+		#install new cron file
+		crontab mycron
+		rm mycron
 fi
 
 
