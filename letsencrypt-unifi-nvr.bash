@@ -51,15 +51,15 @@ fi
 
 if [ $install == 1 ]; then
         # This is needed for add-apt-repository to work
-#       apt-get update && apt-get -y install software-properties-common
-#
-#       # Add letsencrypt apt repo
-#       add-apt-repository -y ppa:certbot/certbot
-#
-#       # Install letsencrypt
-#       apt-get update && apt-get -y install certbot
-#
-#       #### Get certificate
+       apt-get update && apt-get -y install software-properties-common
+
+       # Add letsencrypt apt repo
+       add-apt-repository -y ppa:certbot/certbot
+
+       # Install letsencrypt
+       apt-get update && apt-get -y install certbot
+
+       #### Get certificate
         # Request certificate
         certbot certonly --standalone -d $domain --register-unsafely-without-email
         
